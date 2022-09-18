@@ -221,8 +221,6 @@ def FindNextFabPart(FabPartInput, ListOfFabparts):
 								except:
 									pass
 
-					
-	
 	#Separating taps from main branches based on family name and sorting them by distance from origin (Note: might not need to sort them)	
 	tempList = []
 	taps = []
@@ -374,9 +372,6 @@ if startPoints == [] and IN[3]:
 					lowPriorityStartPoints.append(fabpart)
 	if startPoints == []:
 		startPoints.append(lowPriorityStartPoints[0])
-	
-
-
 
 #Order the start points and inputs by their distance from an origin point
 orderedStartPoints = []
@@ -397,12 +392,6 @@ for start in orderedStartPoints:
 			if i in emptyInputs:
 				emptyInputs.remove(i)
 		output.extend(tempOutput)
-
-
-
-
-
-
 
 if IN[3]:
 	#Try to find a starting point for unnumbered fabparts and rerun the script on these strays
@@ -429,7 +418,6 @@ if IN[3]:
 					emptyInputs.remove(i)
 			output.extend(tempOutput)
 	#
-
 
 #Filter for fabrication parts
 try:
